@@ -1,63 +1,40 @@
-# Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+unsetopt beep
+bindkey -e
+# End of lines configured by zsh-newuser-install
+zstyle :compinstall filename '/home/chrystom/.zshrc'
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time Oh My Zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+autoload -Uz compinit promptinit
+compinit
+promptinit
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+# bind ctrl + l/r arrowkeys
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+# prompt customisation
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+export PS1="[%{%F{57}%}%n%{%F{216}%}@%{%F{166}%}%m %{%F{125}%}%1~ %{%f%}] $ "
 
-# Uncomment the following line to change how often to auto-update (in days).
-zstyle ':omz:update' frequency 13
+# clear backbuffer
+function clear-screen-and-scrollback() {
+    printf '\x1Bc'
+    zle clear-screen
+}
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+zle -N clear-screen-and-scrollback
+bindkey '^L' clear-screen-and-scrollback
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+# more features!
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-export MANPATH="/usr/local/man:$MANPATH"
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
-
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
+# dotfiles alias
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
