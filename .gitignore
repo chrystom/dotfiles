@@ -1,0 +1,32 @@
+# ignore everything by default
+/*
+
+### track these though
+!.gitignore
+
+# shell stuff
+!.zshrc
+!.zprofile
+
+# Allow .config folder, but ignore everything inside by default
+!.config/
+.config/*
+
+# hyprland stuff
+!.config/hypr/
+
+# for convenience/so i dont forget
+!.config/gammastep/
+!.config/spotify-launcher.conf
+!.config/kitty/
+!.config/nvim/
+
+# keep my wacom tablet settings
+!.config/OpenTabletDriver/
+.config/OpenTabletDriver/*
+!.config/OpenTabletDriver/settings.json
+
+
+# ABSOLUTELY IGNORE THESE (trash/sensitive)
+.config/gh/hosts.yml
+.config/git/
