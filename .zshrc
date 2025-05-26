@@ -15,6 +15,12 @@ promptinit
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+# bind deleting using ctrl+bkspace/del
+bindkey '^H' backward-kill-word
+bindkey '^[[3;5~' kill-word
+
+# fix del key
+bindkey "^[[3~" delete-char
 
 # prompt customisation
 alias ls='ls --color=auto'

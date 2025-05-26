@@ -8,9 +8,9 @@
 export DISPLAY=:0
 export SDL_VIDEODRIVER=wayland
 
-# some vulkan dev environments need these
-export VK_LAYER_PATH=/usr/share/vulkan/explicit_layer.d
-export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d
+# some vulkan dev environments need these (doesnt work with CS2)
+#export VK_LAYER_PATH=/usr/share/vulkan/explicit_layer.d
+#export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d
 
 # clean up my /home
 export NUGET_PACKAGES="$XDG_CONFIG_HOME"/NuGetPackages
