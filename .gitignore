@@ -18,7 +18,7 @@
 # for convenience/so i dont forget
 !.config/gammastep/
 !.config/spotify-launcher.conf
-!.config/kitty/
+!.config/foot/
 !.config/nvim/
 
 # keep my wacom tablet settings

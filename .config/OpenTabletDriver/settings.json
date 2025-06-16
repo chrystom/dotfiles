@@ -68,8 +68,8 @@
           "Rotation": 0.0
         },
         "Tablet": {
-          "Width": 80.0,
-          "Height": 64.0,
+          "Width": 118.75,
+          "Height": 95.0,
           "X": 76.0,
           "Y": 47.5,
           "Rotation": 180.0
@@ -97,16 +97,7 @@
           "Enable": true
         },
         "EraserActivationThreshold": 11.0,
-        "EraserButton": {
-          "Path": "OpenTabletDriver.Desktop.Binding.MouseBinding",
-          "Settings": [
-            {
-              "Property": "Button",
-              "Value": "Right"
-            }
-          ],
-          "Enable": true
-        },
+        "EraserButton": null,
         "PenButtons": [
           {
             "Path": "OpenTabletDriver.Desktop.Binding.MouseBinding",
@@ -123,7 +114,7 @@
             "Settings": [
               {
                 "Property": "Button",
-                "Value": "Right"
+                "Value": "Middle"
               }
             ],
             "Enable": true
