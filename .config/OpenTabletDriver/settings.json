@@ -3,7 +3,7 @@
     {
       "Tablet": "Wacom CTL-472",
       "OutputMode": {
-        "Path": "OpenTabletDriver.Desktop.Output.AbsoluteMode",
+        "Path": "OpenTabletDriver.Desktop.Output.LinuxArtistMode",
         "Settings": [],
         "Enable": true
       },
@@ -56,7 +56,7 @@
               "Value": 1000.0
             }
           ],
-          "Enable": true
+          "Enable": false
         }
       ],
       "AbsoluteModeSettings": {
@@ -68,8 +68,8 @@
           "Rotation": 0.0
         },
         "Tablet": {
-          "Width": 118.75,
-          "Height": 95.0,
+          "Width": 70.0,
+          "Height": 56.0,
           "X": 76.0,
           "Y": 47.5,
           "Rotation": 180.0
@@ -114,7 +114,7 @@
             "Settings": [
               {
                 "Property": "Button",
-                "Value": "Middle"
+                "Value": "Right"
               }
             ],
             "Enable": true
