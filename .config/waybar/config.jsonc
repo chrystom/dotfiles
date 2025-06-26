@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 35, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -20,7 +20,6 @@
         "idle_inhibitor",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
@@ -107,7 +106,7 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
+	"format": "{:%I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -149,17 +148,6 @@
     "battery#bat2": {
         "bat": "BAT2"
     },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
@@ -172,19 +160,16 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
         },
         "on-click": "pavucontrol"
     },
@@ -193,12 +178,10 @@
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
-            "spotify": "",
-            "default": "🎜"
+            "spotify": " "
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // only show spotify 
     },
     "custom/power": {
         "format" : "⏻ ",

@@ -12,14 +12,17 @@
 !.config/
 .config/*
 
-# hyprland stuff
+# hyprland setup stuff
 !.config/hypr/
+!.config/waybar/
+!.config/foot/
 
 # for convenience/so i dont forget
+!.config/fontconfig/
 !.config/gammastep/
 !.config/spotify-launcher.conf
-!.config/foot/
 !.config/nvim/
+!.config/vim/
 
 # keep my wacom tablet settings
 !.config/OpenTabletDriver/

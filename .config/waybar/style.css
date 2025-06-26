@@ -1,7 +1,5 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family: Comic Sans MS, "Font Awesome 6 Free";
 }
 
 window#waybar {
@@ -213,6 +211,9 @@ label:focus {
 }
 
 #custom-media {
+    /*font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Brands", "Font Awesome 6 Free", "Font Awesome 5 Free", sans-serif;
+    */
+    font-weight: 900;
     background-color: #66cc99;
     color: #2a5c45;
     min-width: 100px;
