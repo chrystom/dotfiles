@@ -8,6 +8,7 @@
 export DISPLAY=:0
 export SDL_VIDEODRIVER=wayland
 export __GL_THREADED_OPTIMIZATIONS=0
+
 # some vulkan dev environments need these (doesnt work with CS2)
 #export VK_LAYER_PATH=/usr/share/vulkan/explicit_layer.d
 #export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d

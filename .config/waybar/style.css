@@ -213,14 +213,15 @@ label:focus {
 #custom-media {
     /*font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Brands", "Font Awesome 6 Free", "Font Awesome 5 Free", sans-serif;
     */
+    font-family: "Courier New";
     font-weight: 900;
     background-color: #66cc99;
-    color: #2a5c45;
+    color: #11870b;
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+    background-color: #010500;
 }
 
 #custom-media.custom-vlc {
