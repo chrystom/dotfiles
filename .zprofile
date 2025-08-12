@@ -5,7 +5,7 @@
 [[ -f ~/.zshrc ]] && . ~/.zshrc
 
 # firefox + other games need these
-export DISPLAY=:0
+#export DISPLAY=:0
 export SDL_VIDEODRIVER=wayland
 export __GL_THREADED_OPTIMIZATIONS=0
 
@@ -19,6 +19,6 @@ export DUB_HOME="$XDG_CONFIG_HOME"/dub
 
 # uses desktop file from /usr/share/wayland-sessions
 # ALWAYS place startup script at bottom of profile files
-if uwsm check may-start; then
-	exec uwsm start hyprland-uwsm.desktop
+if [ -z "$DISPLAY" ] && [ "$XDG_SESSION_TYPE" != "wayland" ] && [ -z "$SSH_CONNECTION" ]; then
+	exec Hyprland
 fi
