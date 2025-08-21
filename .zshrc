@@ -8,7 +8,7 @@ bindkey -e
 zstyle :compinstall filename '/home/chrystom/.zshrc'
 
 autoload -Uz compinit promptinit
-compinit
+compinit -d $HOME/.cache/zsh/.zcompdump
 promptinit
 
 # bind ctrl + l/r arrowkeys
@@ -23,7 +23,7 @@ bindkey '^[[3;5~' kill-word
 bindkey "^[[3~" delete-char
 
 # prompt customisation
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 export PS1="[%{%F{57}%}%n%{%F{216}%}@%{%F{166}%}%m %{%F{125}%}%1~ %{%f%}] $ "
 
