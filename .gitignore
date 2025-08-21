@@ -15,6 +15,7 @@
 # hyprland setup stuff
 !.config/hypr/
 !.config/waybar/
+!.config/wofi/
 !.config/foot/
 
 # for convenience/so i dont forget
