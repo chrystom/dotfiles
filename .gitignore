@@ -24,6 +24,7 @@
 !.config/spotify-launcher.conf
 !.config/nvim/
 !.config/vim/
+!.config/pipewire/
 
 # keep my wacom tablet settings
 !.config/OpenTabletDriver/
