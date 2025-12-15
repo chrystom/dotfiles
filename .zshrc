@@ -38,4 +38,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
-export PS1="[%{%F{57}%}%n%{%F{216}%}@%{%F{166}%}%m %{%F{125}%}%1~ %{%f%}] $ "
+#export PS1="[%{%F{57}%}%n%{%F{216}%}@%{%F{166}%}%m %{%F{125}%}%1~ %{%f%}] $ "
+#PROMPT='[%F{57}%n%F{216}@%F{166}%m %F{125}%1~%f] $ '
+
+PROMPT='%F{57}%%:%F{216}%1~%f%F{166}> '
